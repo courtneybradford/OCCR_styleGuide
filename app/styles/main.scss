@@ -1,0 +1,425 @@
+
+// ---------------------- How to import SASS partials: -----------------------
+@import 'colors';
+@import 'normalize';
+@import 'grid';
+@import 'fonts';
+
+// ---------------------------------- Styles ----------------------------------
+body {
+  background: $mono-50;
+  color: $mono-600;
+}
+.bounds {
+  max-width: 1280px;
+  padding: 0 3rem;
+}
+
+.styleBlock {
+  margin: 60px 0px 120px;
+  
+  &.darkBg {
+  background: $mono-800;
+  margin: 0;
+  }
+}
+
+hr {
+  border:0;
+  border-bottom: 2px solid $blue-50;
+}
+
+p {
+  font-family: "Tiempos", Georgia, serif;
+  color: $mono-600;
+  font-size: 1.125em;
+  line-height: 1.6;
+
+  &.lead {
+    font-family: "Founders Grotesk Text";
+    font-size: 1.375em;
+    color: $mono-500;
+    line-height: 1.6;
+  }
+
+    &.small {
+    font-size: 1em;
+    line-height: 1.5;
+    color: $mono-400;
+  }
+
+  &.tiny {
+  font-family: "Founders Grotesk Text";
+  color: $mono-400;
+  font-weight: 300;
+  font-size: 0.875em;
+  line-height: 1.357;
+  }
+
+  a:not(.button) {
+    color: $blue-400;
+  }
+
+  a:hover {
+    color: $blue-500;
+    text-decoration: underline;
+  }
+}
+
+
+// ---------------------------------- Links ----------------------------------
+
+/* unvisited link */
+a:not(.button) {
+    color: $blue-500;
+    text-decoration: none;
+}
+
+/* visited link */
+a:not(.button):visited {
+    color: $blue-400;
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:not(.button):hover {
+    color: $blue-300;
+    text-decoration: underline;
+    transition: all .2s ease-in-out;
+}
+
+/* selected link */
+a:active {
+    color: $blue-500;
+    text-decoration: none;
+}
+
+// --------------------------------- Headings ---------------------------------
+h1 {
+  font-size: 3.75em;
+  font-family: "Founders Grotesk Text";
+  text-transform: uppercase;
+  color: $blue-400;
+  font-weight: 300;
+  letter-spacing: .2em;
+  line-height: 1;
+}
+
+
+h2 {
+  font-size: 3em;
+  font-family: "Founders Grotesk Text";
+  color: $blue-400;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  line-height: 1.33;
+}
+
+h3 {
+  font-size: 2.25em;
+  font-family: "Founders Grotesk Text";
+  color: $blue-400;
+  font-weight: 500;
+  line-height: 1em;
+  letter-spacing: 0em;
+}
+
+h4 {
+  font-size: 1.5em;
+  font-family: "Founders Grotesk Text";
+  color: $blue-400;
+  font-weight: 500;
+  line-height: 1em;
+  letter-spacing: 0.02em;
+}
+
+
+h5 {
+  font-size: 1.125em;
+  font-family: "Founders Grotesk";
+  color: $blue-600;
+  font-weight: 700;
+  line-height: 1em;
+  letter-spacing: 0.05em;
+}
+
+h6 { 
+  font-size: .75em;
+  font-family: "Founders Grotesk";
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.125em;
+  letter-spacing: 0.2em;
+  color: $blue-600;
+}
+
+h1.serif {
+  font-size: 3.75rem;
+  font-family: "Tiempos Text";
+  font-weight: 700;
+  color: $blue-700;
+  text-transform: none;
+  line-height: 1;
+  letter-spacing: 0;
+
+}
+
+
+h2.serif {
+  font-size: 3rem;
+  font-family: "Tiempos Text";
+  font-weight: 600;
+  color: $blue-400;
+  text-transform: none;
+  line-height: 1.45;
+  letter-spacing: 0; 
+
+}
+
+h3.serif {
+  font-size: 2.75rem;
+  font-family: "Tiempos Text";
+  font-weight: 300;
+  color: $blue-400;
+  text-transform: none;
+  line-height: 1.45;
+  letter-spacing: 0; 
+
+}
+
+h4.serif {
+  font-size: 2.25rem;
+  font-family: "Tiempos Text";
+  font-weight: 700;
+  color: $blue-600;
+  text-transform: none;
+  line-height: 1.2;
+  letter-spacing: 0;  
+
+  a:not(.button) {
+    color: $blue-400;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $blue-500;
+    text-decoration: none;
+  }
+}
+
+// ---------------------------------- Lists ----------------------------------
+
+ul.swatch-list {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .bg {
+    height: 110px;
+    width: 110px;
+    border-radius: 2px;
+  }
+
+  h6 {
+    color: $mono-700;
+    line-height: 1em;
+    margin: 12px 0px 8px;
+  }
+
+  h3.serif {
+    color: $mono-700;
+    margin: 0px 0px 8px;
+  }
+
+  // Colors
+  &.mono-50 .bg{
+  background: $mono-50;
+  }
+  &.mono-100 .bg{
+    background: $mono-100;
+  }
+  &.mono-200 .bg{
+    background: $mono-200;
+  }
+  &.mono-300 .bg{
+    background: $mono-300;
+  }
+  &.mono-400 .bg{
+    background: $mono-400;
+  }
+  &.mono-500 .bg{
+    background: $mono-500;
+  }
+  &.mono-600 .bg{
+    background: $mono-600;
+  }
+  &.mono-700 .bg{
+    background: $mono-700;
+  }
+  &.mono-800 .bg{
+    background: $mono-800;
+  }
+  &.mono-900 .bg{
+    background: $mono-900;
+  }
+
+  &.blue-50 .bg{
+    background: $blue-50;
+  }
+
+  &.blue-100 .bg{
+    background: $blue-100;
+  }
+  &.blue-200 .bg{
+    background: $blue-200;
+  }
+  &.blue-300 .bg{
+    background: $blue-300;
+  }
+  &.blue-400 .bg{
+    background: $blue-400;
+  }
+  &.blue-500 .bg{
+    background: $blue-500;
+  }
+  &.blue-600 .bg{
+    background: $blue-600;
+  }
+  &.blue-700 .bg{
+    background: $blue-700;
+  }
+
+  &.clay .bg{
+    background: $clay;
+  }
+  &.dusk .bg{
+    background: $dusk;
+  }
+  &.amazon .bg{
+    background: $amazon;
+  }
+  &.lagoon .bg{
+    background: $lagoon;
+  }
+
+  &.acacia .bg{
+    background: $acacia;
+  }
+}
+
+
+// ---------------------------------- Buttons ----------------------------------
+
+
+.button {
+  border-radius: 2px;
+  padding: 19px 32px 17px;
+  line-height: 1;
+  font-size: .75em;
+  color: $white;
+  background: $blue-400;
+  display: inline-block;
+  transition: all .3s ease-in-out;
+  font-family: "Founders Grotesk Text";
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 12px 12px 24px 0px;
+
+  &:hover {
+    background: $blue-500;
+    text-decoration: none;
+    color: $white;
+  }
+
+  &.wide {
+    padding: 19px 120px 17px;
+
+    &:hover {
+    }
+  }
+  &.knockout {
+    padding: 17px 24px 15px;
+    background: transparent;
+    border: 2px solid $blue-200;
+    color: $blue-400; 
+
+    &:hover {
+      background: $blue-200;
+    }
+  }
+  &.secondary {
+    padding: 19px 32px 17px;
+    background: $blue-200;
+    color: $blue-400;
+
+    &:hover {
+      background: $blue-300;
+    }
+  }
+  
+  &.disabled {
+    padding: 19px 32px 17px;
+    background: $mono-200;
+    color: $mono-600;
+    pointer-events: none;
+
+    &:hover {
+      background: $mono-300;
+    }
+  }
+
+  &.inverse {
+    padding: 19px 32px 17px;
+    background: $white;
+    color: $mono-800;
+    margin: 20px 24px 20px 40px;
+
+    &:hover {
+      background: $mono-300;
+      color: $mono-900;
+    }
+  }
+
+  &.inverseKnockout {
+    padding: 17px 24px 15px;
+    background: transparent;
+    border: 2px solid $white;
+    color: $white;
+    margin: 20px 24px 20px 40px;
+
+    &:hover {
+      background: $white;
+      color: $mono-800;
+    }
+  }
+
+  &.small {
+     font-family: "Founders Grotesk Text";
+     font-weight: 600;
+     padding: 14px 24px 12px;
+     font-size: 0.625rem;
+  }
+
+  &.large {
+    padding: 22px 48px 21px;
+    text-transform: none;
+    font-family: "Founders Grotesk Text";
+    font-weight: 400;
+    letter-spacing: .1em;
+    font-size: 1.125em;
+  }
+}
+
